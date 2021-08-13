@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StoreContext } from "../context/store-context"
-import Logo from "../icons/logo"
+import "../icons/logo.png"
 import { Navigation } from "./navigation"
 import { CartButton } from "./cart-button"
 import SearchIcon from "../icons/search"
@@ -26,8 +26,8 @@ export function Header() {
   return (
     <div className={container}>
       <header className={header}>
-        <Link to="/" className={logoCss}>
-          <Logo />
+      <Link to="/" style={{width: 300}}>
+          <img src="./logo.png" alt="logo" style={{width: 350}}/>
         </Link>
         <Navigation className={nav} />
         <Link to="/search" className={searchButton}>

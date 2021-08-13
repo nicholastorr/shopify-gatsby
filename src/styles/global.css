@@ -1,6 +1,7 @@
 body {
   font-family: var(--font-body);
   color: var(--text-color);
+  background-color: #f9f9f9;
 }
 
 .gatsby-image-wrapper {
