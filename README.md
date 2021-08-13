@@ -1,3 +1,21 @@
+## To get started 
+
+```shell
+
+git clone https://github.com/MBS-Standoffs/shopify-gatsby-rework    
+cd shopify-gatsby-rework
+npm install
+gatsby develop
+
+```
+
+## Todo
+
+    [] Improve Header mobile responsiveness
+    [] Add filters like on search page to collection pages
+    []  Add carousel home page
+    [] add collections to home page
+    
 
 ## 🧐 What's inside?
 
