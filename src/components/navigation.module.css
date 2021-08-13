@@ -34,3 +34,18 @@
 .navLink[aria-active="page"]:hover {
   color: var(--primary);
 }
+
+.headerNav {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 640px) {
+  .headerNav {
+    width: 100%;
+    display: flex;
+  flex-direction: row;
+    
+  }
+}

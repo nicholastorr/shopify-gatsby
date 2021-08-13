@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery, Link } from "gatsby"
 import * as React from "react"
 import slugify from "@sindresorhus/slugify"
-import { navStyle, navLink, activeLink } from "./navigation.module.css"
+import { navStyle, navLink, activeLink, headerNav } from "./navigation.module.css"
 import EngineeringCopierPapers   from "./types/EngineeringCopierPaper/EngineeringCopierPaper"
 import PlotterPapers from "./types/PlotterPaper";
 import InkjetMedia from "./types/inkjetmedia/InkjetMedia";
@@ -20,7 +20,7 @@ export function Navigation({ className }) {
 
   return (
     
-    <div class="header-nav">
+    <div className={headerNav}>
     <PlotterPapers />
     <EngineeringCopierPapers />
     <InkjetMedia />

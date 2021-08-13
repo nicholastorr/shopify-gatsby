@@ -1,7 +1,8 @@
 .navbar2 {
-  width: 1000px;
+  width: 25%;
   background-color: white;
   margin-top: 10px;
+  padding-left: 30px;
 }
 
 /* Navigation links */
