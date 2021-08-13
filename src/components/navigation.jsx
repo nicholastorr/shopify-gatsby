@@ -3,6 +3,7 @@ import * as React from "react"
 import slugify from "@sindresorhus/slugify"
 import { navStyle, navLink, activeLink } from "./navigation.module.css"
 import   EngineeringCopierPapers   from "./types/EngineeringCopierPaper"
+import PlotterPapers from "./types/PlotterPaper";
 
 
 export function Navigation({ className }) {
@@ -18,8 +19,11 @@ export function Navigation({ className }) {
 
   return (
     
-    
+    <div>
+    <PlotterPapers />
     <EngineeringCopierPapers />
+    
+    </div>
     /*<nav className={[navStyle, className].join(" ")}>
 
       

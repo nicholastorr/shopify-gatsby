@@ -27,7 +27,7 @@ export function Header() {
     <div className={container}>
       <header className={header}>
       <Link to="/" style={{width: 300}}>
-          <img src="./logo.png" alt="logo" style={{width: 350}}/>
+          <img src="https://cdn.shopify.com/s/files/1/0292/8205/files/logo.png?v=1628871064" alt="logo" style={{width: 350}}/>
         </Link>
         <Navigation className={nav} />
         <Link to="/search" className={searchButton}>

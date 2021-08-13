@@ -37,8 +37,12 @@
   .navbar a:hover, .subnav:hover .subnavbtn {
     background-color: white;
     border-top:firebrick 1px solid;
+    border-right: firebrick 1px solid;
+    border-left: firebrick 1px solid;
   }
   
+
+
   /* Style the subnav content - positioned absolute */
   .subnav-content {
     display: none;
@@ -60,6 +64,7 @@
   .subnav-content a:hover {
     background-color: #eee;
     color: black;
+    border: none;
   }
   
   /* When you move the mouse over the subnav container, open the subnav content */
