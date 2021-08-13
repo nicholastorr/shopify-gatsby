@@ -48,7 +48,7 @@
   .subnav-content {
     display: none;
     position: absolute;
-    left: 0;
+    left: 10;
     background-color: white;
     width: 500px;
     z-index: 1;
