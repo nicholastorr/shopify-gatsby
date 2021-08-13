@@ -24,10 +24,10 @@ export default function EngineeringCopierPapers() {
     
 
     return (
-    <div class="navbar">
-    <div class="subnav">
-        <button class="subnavbtn">Engineering Copier Paper</button>
-        <div class="subnav-content">
+    <div class="navbar1">
+    <div class="subnav1">
+        <button class="subnavbtn1">Engineering Copier Paper</button>
+        <div class="subnav-content1">
             {categories.map(category => (
                 <a href={category.link}>{category.title}</a>
             ))}
