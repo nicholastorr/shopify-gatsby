@@ -74,3 +74,9 @@
     flex-direction: column;
     float: left;
   }
+
+  @media (max-width: 640px) {
+    div.navbar1 .subnav1 .subnavbtn1 {
+      padding: 0;
+    }
+  }

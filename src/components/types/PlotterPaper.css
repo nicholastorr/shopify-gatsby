@@ -76,3 +76,12 @@
     flex-direction: column;
     float: left;
   }
+
+  @media (max-width: 640px) {
+    .navbar {
+      padding: 0;
+    }
+  }
+
+
+  

@@ -8,6 +8,7 @@ import SearchIcon from "../icons/search"
 import { Toast } from "./toast"
 import {
   header,
+  navLogo,
   container,
   logo as logoCss,
   searchButton,
@@ -26,8 +27,8 @@ export function Header() {
   return (
     <div className={container}>
       <header className={header}>
-      <Link to="/" style={{width: 300}}>
-          <img src="https://cdn.shopify.com/s/files/1/0292/8205/files/logo.png?v=1628871064" alt="logo" style={{width: 350, margin: 0}}/>
+      <Link to="/" className={navLogo}>
+          <img  src="https://cdn.shopify.com/s/files/1/0292/8205/files/logo.png?v=1628871064" alt="logo" style={{ margin: 0}}/>
         </Link>
         <Navigation className={nav} />
         <Link to="/search" className={searchButton}>

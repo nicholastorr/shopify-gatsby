@@ -36,16 +36,22 @@
 }
 
 .headerNav {
-  width: 1200px;
+  width: 75%;
   display: flex;
   flex-direction: row;
+  margin-left: auto;
 }
 
 @media (max-width: 640px) {
   .headerNav {
-    width: 100%;
+    width: 375px;
     display: flex;
-  flex-direction: row;
-    
+    flex-direction: row;
+  }
+
+  .headerNav {
+    width: 375px;
+    display: flex;
+    flex-direction: row;
   }
 }
