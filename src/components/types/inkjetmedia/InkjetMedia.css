@@ -52,6 +52,7 @@
   background-color: white;
   width: 500px;
   z-index: 1;
+  margin-left: 47.5em;
 }
 
 /* Style the subnav links */
@@ -79,5 +80,14 @@
 @media (max-width: 640px) {
   div.navbar2 {
     padding: 0;
+  }
+
+  .navbar2 a:hover, .subnav2:hover .subnavbtn2 {
+    border: none;
+  }
+
+  .subnav2:hover .subnav-content2 {
+    display: none;
+    border: none;
   }
 }

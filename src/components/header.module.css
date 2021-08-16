@@ -38,24 +38,7 @@
 
 }
 
-.logo {
-  display: flex;
-  grid-area: logo;
-  height: 100%;
-  width: 25%;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-color-secondary);
-}
 
-.logo:hover {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.logo[aria-current="page"] {
-  color: var(--primary);
-}
 
 .nav {
   grid-area: navHeader;
@@ -84,8 +67,8 @@
 }
 
 @media (max-width: 640px) {
-  .navLogo {
-    width: 150px;
+  .headerLogo {
+      width: 250px !important;
   }
 }
 

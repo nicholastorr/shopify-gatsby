@@ -9,14 +9,19 @@ import { Toast } from "./toast"
 import {
   header,
   navLogo,
+  headerLogo,
   container,
-  logo as logoCss,
   searchButton,
   nav,
 } from "./header.module.css"
+import useWindowDimensions from "../utils/windowDimensions"
 
 export function Header() {
   const { checkout, loading, didJustAddToCart } = React.useContext(StoreContext)
+  const { height, width } = useWindowDimensions();
+
+
+  console.log(`width: ${width}`);
 
   const items = checkout ? checkout.lineItems : []
 
@@ -28,7 +33,7 @@ export function Header() {
     <div className={container}>
       <header className={header}>
       <Link to="/" className={navLogo}>
-          <img  src="https://cdn.shopify.com/s/files/1/0292/8205/files/logo.png?v=1628871064" alt="logo" style={{ margin: 0}}/>
+          <img className={headerLogo} src="https://cdn.shopify.com/s/files/1/0292/8205/files/logo.png?v=1628871064" alt="" style={{ width: width / 4.5}}/>
         </Link>
         <Navigation className={nav} />
         <Link to="/search" className={searchButton}>

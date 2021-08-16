@@ -51,6 +51,7 @@
     background-color: white;
     width: 500px;
     z-index: 1;
+    margin-left: 58em;
   }
   
   /* Style the subnav links */
@@ -73,4 +74,19 @@
     display: flex;
     flex-direction: column;
     float: left;
+  }
+
+  @media (max-width: 640px) {
+    div.navbar3 {
+      padding: 0;
+    }
+  
+    .navbar3 a:hover, .subnav3:hover .subnavbtn3 {
+      border: none;
+    }
+
+    .subnav3:hover .subnav-content3 {
+      display: none;
+      border: none;
+    }
   }

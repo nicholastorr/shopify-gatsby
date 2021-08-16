@@ -47,11 +47,7 @@
     width: 375px;
     display: flex;
     flex-direction: row;
+    margin-left: -15px;
   }
 
-  .headerNav {
-    width: 375px;
-    display: flex;
-    flex-direction: row;
-  }
 }
