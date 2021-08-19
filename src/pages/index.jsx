@@ -9,16 +9,29 @@ import {
   callToAction,
   deployButton,
 } from "./index.module.css"
+import PlotterPapers from "../components/homeCollections/PlotterPapers";
+import styled from "styled-components";
+import EngineeringCopierPapers from "../components/homeCollections/EngineeringCopierPaper";
+import InkjetMedia from "../components/homeCollections/InkjetMedia";
+import InksAndToners from "../components/homeCollections/InksAndToners";
 
-export const query = graphql`
-  query {
-    shopifyCollection(handle: { eq: "frontpage" }) {
-      products {
-        ...ProductCard
-      }
-    }
-  }
-`
+
+
+// styles
+const pageStyles = {
+  color: "#232129",
+  padding: 96,
+  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  //margin: "0 20% 0 20%",
+}
+
+const Container = styled.div`
+  margin: 0 35% 0 18.75%;
+  `
+
+
+
+
 function Hero (props) {
   return (
     <div className={container}>
@@ -51,7 +64,12 @@ export default function IndexPage({ data }) {
   return (
     <Layout>
       <Hero />
-      <ProductListing products={data?.shopifyCollection?.products} />
+      <Container>
+        <PlotterPapers />
+        <EngineeringCopierPapers />
+        <InkjetMedia />
+        <InksAndToners />
+      </Container>
     </Layout>
   )
 }
