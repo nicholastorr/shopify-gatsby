@@ -14,6 +14,8 @@ import styled from "styled-components";
 import EngineeringCopierPapers from "../components/homeCollections/EngineeringCopierPaper";
 import InkjetMedia from "../components/homeCollections/InkjetMedia";
 import InksAndToners from "../components/homeCollections/InksAndToners";
+import Carousel from "./carousel";
+import img from "./Kong-Banners.jpg"
 
 
 
@@ -27,6 +29,10 @@ const pageStyles = {
 
 const Container = styled.div`
   margin: 0 35% 0 18.75%;
+  `
+
+const Image = styled.img`
+  align-self: center;
   `
 
 
@@ -64,12 +70,26 @@ export default function IndexPage({ data }) {
   return (
     <Layout>
       <Hero />
-      <Container>
-        <PlotterPapers />
-        <EngineeringCopierPapers />
-        <InkjetMedia />
-        <InksAndToners />
-      </Container>
+        
+          <Carousel />
+        
+            <Container>
+              <PlotterPapers />
+              <EngineeringCopierPapers />
+              <InkjetMedia />
+              <InksAndToners />
+            </Container>
     </Layout>
   )
 }
+
+
+//if screen < 1000px, use this homepage 
+/*export default function IndexPage({ data }) {
+  return (
+    <Layout>
+      <Hero />
+      <ProductListing products={data?.shopifyCollection?.products} />
+    </Layout>
+  )
+}*/
