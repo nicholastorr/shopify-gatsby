@@ -3,8 +3,12 @@ import "./InkjetMedia.css"
 
 const categories = [
     {
-    title: "Photo Paper",
-    link: "/products/photo-paper"
+    title: "Satin Photo Paper",
+    link: "/products/photo-satin-paper"
+    },
+    {
+    title: "Gloss Photo Paper",
+    link: "/products/photo-gloss-paper"
     },
     {
     title: "Satin Poster Paper",

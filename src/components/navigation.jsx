@@ -3,7 +3,7 @@ import * as React from "react"
 import slugify from "@sindresorhus/slugify"
 import { navStyle, navLink, activeLink, headerNav } from "./navigation.module.css"
 import EngineeringCopierPapers   from "./types/EngineeringCopierPaper/EngineeringCopierPaper"
-import PlotterPapers from "./types/PlotterPaper";
+import PlotterPapers from "./types/PlotterPaper/PlotterPaper";
 import InkjetMedia from "./types/inkjetmedia/InkjetMedia";
 import InksAndToners from "./types/InksandToners/InksAndToners"
 
