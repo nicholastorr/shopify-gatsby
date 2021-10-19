@@ -6,9 +6,8 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 const Category = styled.div`
   display: flex;
   flex-direction: row;
-
   justify-content: space-between;
-    align-items: center;
+  align-items: center;
 `
 const Button = styled.a`
 

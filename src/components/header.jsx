@@ -14,14 +14,21 @@ import {
   searchButton,
   nav,
 } from "./header.module.css"
-import useWindowDimensions from "../utils/windowDimensions"
+import useWindowSize from "../utils/windowDimensions"
+
+
+
 
 export function Header() {
+
+  
+
   const { checkout, loading, didJustAddToCart } = React.useContext(StoreContext)
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowSize();
 
 
-  console.log(`width: ${width}`);
+  
+  console.log(`${width}`)
 
   const items = checkout ? checkout.lineItems : []
 

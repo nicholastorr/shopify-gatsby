@@ -79,3 +79,17 @@ The site uses [CSS Modules](https://github.com/css-modules/css-modules) for styl
 [Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/cloud/)
 
 Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
+
+
+<br>
+
+
+# .env 
+-------------------
+```
+# See how to get these values here: https://gatsby.dev/shopify-api-keys
+GATSBY_STOREFRONT_ACCESS_TOKEN=XXX
+GATSBY_SHOPIFY_STORE_URL=plotterpaperdirect.myshopify.com
+SHOPIFY_SHOP_PASSWORD=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
+GOOGLE_ANALYTICS_ID=XXX
+```

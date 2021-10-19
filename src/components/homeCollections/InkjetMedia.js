@@ -2,76 +2,17 @@ import React, { useState } from"react"
 import { useInkjetMedia } from "./queries/inkjetMediaQuery";
 import styled from "styled-components";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-
-const Category = styled.div`
-  display: flex;
-  flex-direction: row;
-
-  justify-content: space-between;
-    align-items: center;
-`
-const Button = styled.a`
-
-`
-const Products = styled.div`
-    margin-left: 20px;
-    width: 225px;
-    height 325px;
-`
-const Collections = styled.p`
-    margin: 0px;
-    font-size: .75em;
-    text-decoration: none;
-`
-
-const Link = styled.a`
-    text-decoration: none;
-`
-const Cats = styled.div`
-    margin-top: -75px;
-    width: 170px;
-    height: 315px;
-    `
+import { Category,
+    Button,
+    Products,
+    Collections,
+    Link,
+    Cats,
+    CategoryTitle } from "./styles";
+import { inkjetMediaCategories } from "./categories";
 
 
-const categories = [
-    {
-    title: "Photo Paper",
-    link: "/photo-paper"
-    },
-    {
-    title: "Satin Poster Paper",
-    link: "/satin-poster-paper"
-    },
-    {
-    title: "Poly Pro Matte",
-    link: "/poly-pro-matte"
-    },
-    {
-    title: "Self Adhesive Poly Pro Matte",
-    link: "/self-adhesive-poly-pro-matte"
-    },
-    {
-    title: "Matte Polyester Canvas",
-    link: "/matte-polyester-canvas"
-    },
-    {
-    title: "Banner Media",
-    link: "/banner-media"
-    },
-    {
-    title: "Inkjet Films and Mylar",
-    link: "/inkjet-films-and-mylar"
-    },
-    {
-    title: "Art Paper",
-    link: "/art-paper"
-    },
-    {
-    title: "Lamination Spray",
-    link: "/lamination-spray"
-    }
-]
+
 
 
 
@@ -82,7 +23,7 @@ export default function InkjetMedia() {
 
     return (
         <div>
-            <h2>Inkjet Media</h2>
+            <CategoryTitle>Inkjet Media</CategoryTitle>
             
             <Category>
                 <Button onClick={() => {
@@ -101,12 +42,12 @@ export default function InkjetMedia() {
                             ))}
                 <Button onClick={() => {
                     if (initialLength <= data.length - 5) 
-                    setInitialState(initialLength + 5)}}><StaticImage src="https://cdn.shopify.com/s/files/1/0292/8205/files/right-arrow1.png?v=1628795125" style={{width: 25}} /> 
+                    setInitialState(initialLength + 5)}}><StaticImage src="https://cdn.shopify.com/s/files/1/0292/8205/files/right-arrow1.png?v=1628795125" style={{width: 25, marginLeft: 10}} /> 
                 </Button>
                 <Cats>
                     <h3>Categories</h3>
                     <div style={{marginTop: -10, marginLeft: 10}}>
-                        {categories.map(category => (
+                        {inkjetMediaCategories.map(category => (
                             <Link href={category.link}><Collections>• {category.title}</Collections></Link>
                         ))}
                     </div>
