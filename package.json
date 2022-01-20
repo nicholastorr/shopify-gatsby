@@ -41,6 +41,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
     "shopify-buy": "^2.11.0",
+    "styled-components": "^5.3.3",
     "urql": "^2.0.2"
   }
 }
