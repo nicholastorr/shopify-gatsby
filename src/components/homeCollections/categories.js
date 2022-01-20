@@ -93,4 +93,48 @@ export const inkjetMediaCategories = [
     title: "Lamination Spray",
     link: "/lamination-spray"
     }
-]
+];
+
+    
+    export const inksAndTonersCategories = [
+        {
+        title: "Core Adapters",
+        link: "core-adapters",
+        },
+        {
+        title: "5000/5500 Dye Inks",
+        link: "hp-designjet-5000/5500",
+        },
+        {
+        title: "T610/T620/T770/T790 Inks",
+        link: "hp-designjet-t610/t620/t770/t790",
+        },
+        {
+        title: "500/800/815/820 Inks",
+        link: "hp-designjet-500/800/815/820",
+        },
+        {
+        title: "T1200/T1300/T2300 Inks",
+        link: "hp-designjet-t1100/t1120/t1200/t1300/t2300",
+        },
+        {
+        title: "Z6100 Inks",
+        link: "hp-designjet-z6100",
+        },
+        {
+        title: "4000/4020/4500/4520 Inks",
+        link: "hp-designjet-4000/4020/4500/4520",
+        },
+        {
+        title: "5000/5500 UV Inks",
+        link: "hp-designjet-5000/5500-uv",
+        },
+        {
+        title: "1050/1055 Inks",
+        link: "hp-designjet-1050/1055",
+        },
+        {
+        title: "510 Inks",
+        link: "hp-designjet-510",
+        },
+    ]

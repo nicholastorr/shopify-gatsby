@@ -28,7 +28,10 @@ const pageStyles = {
 }
 
 const Container = styled.div`
-  margin: 0 35% 0 18.75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   `
 
 const Image = styled.img`
