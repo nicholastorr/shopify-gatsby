@@ -15,7 +15,8 @@ import EngineeringCopierPapers from "../components/homeCollections/EngineeringCo
 import InkjetMedia from "../components/homeCollections/InkjetMedia";
 import InksAndToners from "../components/homeCollections/InksAndToners";
 import Carousel from "./carousel";
-import img from "./Kong-Banners.jpg"
+import img from "./Kong-Banners.jpg";
+
 
 
 
@@ -37,7 +38,6 @@ const Container = styled.div`
 const Image = styled.img`
   align-self: center;
   `
-
 
 
 
@@ -72,16 +72,22 @@ function Hero (props) {
 export default function IndexPage({ data }) {
   return (
     <Layout>
+      
+
       <Hero />
         
           <Carousel />
         
             <Container>
+            
               <PlotterPapers />
               <EngineeringCopierPapers />
               <InkjetMedia />
               <InksAndToners />
             </Container>
+            
+
+           
     </Layout>
   )
 }

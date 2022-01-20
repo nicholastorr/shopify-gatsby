@@ -1,5 +1,6 @@
 import * as React from 'react';
-
+import { Menu, Dropdown } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
 
 import "./PlotterPaper.css"
 
@@ -52,16 +53,15 @@ const categories = [
 
 export default function PlotterPapers() {
 
+
     return (
-        <div class="navbar">
-            <div class="subnav">
-                <button class="subnavbtn">Plotter Paper</button>
-                <div class="subnav-content">
-                    {categories.map(category => (
-                        <a href={category.link}>{category.title}</a>
-                ))}
-                </div>
-            </div>
-        </div>  
+        <Menu>
+            {categories.map((category, index) => (
+                <Menu.Item key={index}>
+                    <a href={category.link}>{category.title}</a>
+                </Menu.Item>
+            ))}
+
+        </Menu>
     )
 }

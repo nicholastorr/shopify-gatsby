@@ -3,11 +3,17 @@ import * as React from "react"
 import slugify from "@sindresorhus/slugify"
 import { navStyle, navLink, activeLink, headerNav } from "./navigation.module.css"
 import EngineeringCopierPapers   from "./types/EngineeringCopierPaper/EngineeringCopierPaper"
-import PlotterPapers from "./types/PlotterPaper/PlotterPaper";
 import InkjetMedia from "./types/inkjetmedia/InkjetMedia";
-import InksAndToners from "./types/InksandToners/InksAndToners"
+import InksAndToners from "./types/InksandToners/InksAndToners";
+import { Menu, Dropdown } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+import PlotterPapers from "./types/PlotterPaper/PlotterPaper";
+import "antd/dist/antd.css";
 
 export function Navigation({ className }) {
+
+  const menu = PlotterPapers();
+  
   const {
     allShopifyProduct: { productTypes },
   } = useStaticQuery(graphql`
@@ -21,10 +27,12 @@ export function Navigation({ className }) {
   return (
     
     <div className={headerNav}>
-    <PlotterPapers />
-    <EngineeringCopierPapers />
-    <InkjetMedia />
-    <InksAndToners />
+      <Dropdown overlay={menu}>
+        <h3>Plotter Papers</h3>
+      </Dropdown>
+      <EngineeringCopierPapers />
+      <InkjetMedia />
+      <InksAndToners />
     </div>
     /*<nav className={[navStyle, className].join(" ")}>
 
