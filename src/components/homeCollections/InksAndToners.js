@@ -30,25 +30,26 @@ export default function InksAndToners() {
     return (
         <HomeCategories>
             <CategoryTitle>Inks &#38; Toners</CategoryTitle>
-            <Category>
-                <Button onClick={() => {
+                <Button style={{color: "#E95F0A"}} onClick={() => {
                     if (initialLength != 0) { 
-                    setInitialState(initialLength - 5)}}}><LeftOutlined style={{cursor: "pointer"}} />
+                    setInitialState(initialLength - 4)}}}><LeftOutlined style={{cursor: "pointer"}} />Previous
                 </Button>
-                        {data.slice(initialLength,initialLength + 5).map(paper => ( 
-                            <InkProduct>
+                <Category>
+                        {data.slice(initialLength,initialLength + 4).map(paper => ( 
+                            <Products>
                                 <a href={`/${paper.product.handle}`}>
                                 <GatsbyImage image={getImage(paper.product.images[0])} style={{width: 190, height: 190}}alt=""/>
                                 <h4>{paper.product.title}</h4>
                                 </a>
                                 <p>Price: {paper.price}</p>
-                            </InkProduct>
+                            </Products>
                             ))}
-                <Button onClick={() => {
-                    if (initialLength <= data.length - 5) 
-                    setInitialState(initialLength + 5)}}><RightOutlined style={{cursor: "pointer", marginRight: "10px"}} />
+                </Category>
+                <Button style={{color: "#E95F0A"}} onClick={() => {
+                    if (initialLength <= data.length - 4) 
+                    setInitialState(initialLength + 4)}}><RightOutlined style={{cursor: "pointer", marginRight: "10px"}} />Load More
                 </Button>
-                <Cats style={{marginRight: "7px", marginTop: "-100px"}}>
+                <Cats style={{marginRight: "7px"}}>
                     <ChildCategoryTitle>Categories</ChildCategoryTitle>
                     <div style={{marginLeft: 10}}>
                         {inksAndTonersCategories.map(category => (
@@ -56,7 +57,6 @@ export default function InksAndToners() {
                         ))}
                     </div>
                 </Cats>
-            </Category>
         </HomeCategories>
     )
 }

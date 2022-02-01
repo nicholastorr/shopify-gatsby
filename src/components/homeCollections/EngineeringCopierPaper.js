@@ -10,7 +10,8 @@ import { Category,
     Cats,
     CategoryTitle,
     HomeCategories,
-    ChildCategoryTitle } from "./styles";
+    ChildCategoryTitle,
+    CategoryBody } from "./styles";
 
 import { engineeringCopierPaperCategories } from "./categories";
 import {LeftOutlined, RightOutlined} from "@ant-design/icons";
@@ -25,12 +26,13 @@ export default function EngineeringCopierPapers() {
     return (
         <HomeCategories>
             <CategoryTitle>Engineering Copier Paper</CategoryTitle>
-            <Category>
-                <Button onClick={() => {
+            <CategoryBody>
+                <Button style={{color: "#E95F0A"}} id="load-less" onClick={() => {
                     if (initialLength != 0) { 
-                    setInitialState(initialLength - 5)}}}><LeftOutlined style={{cursor: "pointer"}} />
+                    setInitialState(initialLength - 4)}}}><LeftOutlined style={{cursor: "pointer"}} />Previous
                 </Button>
-                        {data.slice(initialLength,initialLength + 5).map(paper => (
+                <Category>
+                        {data.slice(initialLength,initialLength + 4).map(paper => (
                             <Products>    
                                 <a href={`/${paper.product.handle}`}>
                                 <GatsbyImage image={getImage(paper.product.images[0])} style={{width: 190, height: 190}} alt=""/>
@@ -39,11 +41,12 @@ export default function EngineeringCopierPapers() {
                                 <p>Price: {paper.price}</p>
                             </Products>
                             ))}
-                <Button onClick={() => {
+                </Category>
+                <Button style={{color: "#E95F0A"}} id="load-more" onClick={() => {
                     if (initialLength <= data.length - 5) 
-                    setInitialState(initialLength + 5)}}><RightOutlined style={{cursor: "pointer", marginRight: "10px", marginLeft: "7px"}} />
+                    setInitialState(initialLength + 4)}}><RightOutlined style={{cursor: "pointer", marginRight: "10px", marginLeft: "7px"}} />Load More
                 </Button>
-                <Cats style={{marginTop: "-275px"}}>
+                <Cats style={{}}>
                     <ChildCategoryTitle>Categories</ChildCategoryTitle>
                     <div style={{marginLeft: 10}}>
                         {engineeringCopierPaperCategories.map(category => (
@@ -51,7 +54,7 @@ export default function EngineeringCopierPapers() {
                         ))}
                     </div>
                 </Cats>
-            </Category>
+                </CategoryBody>
         </HomeCategories>
     )
 }

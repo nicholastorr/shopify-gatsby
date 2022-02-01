@@ -10,7 +10,7 @@
   padding-bottom: var(--space-lg);
   line-height: var(--dense);
   font-size: var(--text-display);
-  color: var(--text-color-secondary);
+  color: crimson;
 }
 
 .callOut {

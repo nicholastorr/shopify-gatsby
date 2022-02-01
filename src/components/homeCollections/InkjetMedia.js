@@ -10,7 +10,8 @@ import { Category,
     Cats,
     CategoryTitle,
     HomeCategories,
-    ChildCategoryTitle  } from "./styles";
+    ChildCategoryTitle,
+    CategoryBody  } from "./styles";
 import { inkjetMediaCategories } from "./categories";
 import {LeftOutlined, RightOutlined} from "@ant-design/icons";
 
@@ -31,25 +32,27 @@ export default function InkjetMedia() {
     return (
         <HomeCategories>
             <CategoryTitle>Inkjet Media</CategoryTitle>
-            <Category>
-                <Button onClick={() => {
+            <CategoryBody>
+                <Button style={{color: "#E95F0A"}} id="load-less" onClick={() => {
                     if (initialLength != 0) { 
-                    setInitialState(initialLength - 5)}}}><LeftOutlined style={{cursor: "pointer"}} />
+                    setInitialState(initialLength - 4)}}}><LeftOutlined style={{cursor: "pointer"}} />Previous
                 </Button>
-                        {data.slice(initialLength,initialLength + 5).map(paper => ( 
-                            <InkProduct>
+                <Category>
+                        {data.slice(initialLength,initialLength + 4).map(paper => ( 
+                            <Products>
                                 <a href={`/${paper.product.handle}`}>
                                 <GatsbyImage image={getImage(paper.product.images[0])} style={{width: 190, height: 190}}alt=""/>
                                 <h4>{paper.product.title}</h4>
                                 </a>
                                 <p>Price: {paper.price}</p>
-                            </InkProduct>
+                            </Products>
                             ))}
-                <Button onClick={() => {
-                    if (initialLength <= data.length - 5) 
-                    setInitialState(initialLength + 5)}}><RightOutlined style={{cursor: "pointer", marginRight: "10px"}} />
+                </Category>
+                <Button style={{color: "#E95F0A"}} id="load-more" onClick={() => {
+                    if (initialLength <= data.length - 4) 
+                    setInitialState(initialLength + 5)}}><RightOutlined style={{cursor: "pointer", marginRight: "10px"}} />Load More
                 </Button>
-                <Cats style={{marginTop: "-100px"}}>
+                <Cats style={{}}>
                     <ChildCategoryTitle>Categories</ChildCategoryTitle>
                     <div style={{marginLeft: 10}}>
                         {inkjetMediaCategories.map(category => (
@@ -57,7 +60,7 @@ export default function InkjetMedia() {
                         ))}
                     </div>
                 </Cats>
-            </Category>
+            </CategoryBody>
         </HomeCategories>
         
     )
