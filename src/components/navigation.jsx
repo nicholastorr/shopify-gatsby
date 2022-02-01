@@ -12,7 +12,10 @@ import "antd/dist/antd.css";
 
 export function Navigation({ className }) {
 
-  const menu = PlotterPapers();
+  const plotterpapers = PlotterPapers();
+  const engineeringcopierpapers = EngineeringCopierPapers();
+  const inkjetmedia = InkjetMedia();
+  const inksandtoners = InksAndToners();
   
   const {
     allShopifyProduct: { productTypes },
@@ -27,12 +30,18 @@ export function Navigation({ className }) {
   return (
     
     <div className={headerNav}>
-      <Dropdown overlay={menu}>
-        <h3>Plotter Papers</h3>
+      <Dropdown overlay={plotterpapers}>
+        <h2>Plotter Papers</h2>
       </Dropdown>
-      <EngineeringCopierPapers />
-      <InkjetMedia />
-      <InksAndToners />
+      <Dropdown overlay={engineeringcopierpapers}>
+        <h2>Engineering Copier Paper</h2>
+      </Dropdown>
+      <Dropdown overlay={inkjetmedia}>
+        <h2>Inkjet Media</h2>
+      </Dropdown>
+      <Dropdown overlay={inksandtoners}>
+        <h2>Inks and Toners</h2>
+      </Dropdown>
     </div>
     /*<nav className={[navStyle, className].join(" ")}>
 

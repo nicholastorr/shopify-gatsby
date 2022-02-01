@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import { Menu } from "antd";
 import "./InksAndToners.css"
 
 const categories = [
@@ -49,15 +49,12 @@ const categories = [
 export default function InksAndToners() {
 
     return (
-        <div class="navbar3">
-            <div class="subnav3">
-                <button class="subnavbtn3">Inks &#38; Toners</button>
-                <div class="subnav-content3">
-                    {categories.map(category => (
-                        <a href={category.link}>{category.title}</a>
-                ))}
-                </div>
-            </div>
-        </div>  
+        <Menu>
+            {categories.map((category, index) => (
+                <Menu.Item key={index}>
+                    <a href={category.link}>{category.title}</a>
+                </Menu.Item>
+            ))}
+        </Menu>
     )
 }

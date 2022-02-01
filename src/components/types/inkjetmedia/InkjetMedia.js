@@ -1,4 +1,6 @@
 import * as React from 'react';
+
+import { Menu } from "antd";
 import "./InkjetMedia.css"
 
 const categories = [
@@ -49,15 +51,12 @@ export default function InkjetMedia() {
     
 
     return (
-    <div class="navbar2">
-    <div class="subnav2">
-        <button class="subnavbtn2">Inkjet Media</button>
-        <div class="subnav-content2">
-            {categories.map(category => (
-                <a href={category.link}>{category.title}</a>
+        <Menu>
+            {categories.map((category, index) => (
+                <Menu.Item key={index}>
+                    <a href={category.link}>{category.title}</a>
+                </Menu.Item>
             ))}
-        </div>
-    </div>
-    </div>  
+        </Menu>
     )
 }

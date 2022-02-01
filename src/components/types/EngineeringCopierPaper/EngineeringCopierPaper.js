@@ -1,4 +1,6 @@
-import * as React from "react"
+import * as React from "react";
+import { Menu } from "antd";
+
 
 import  "./EngineeringCopierPaper.css";
 
@@ -24,15 +26,13 @@ export default function EngineeringCopierPapers() {
     
 
     return (
-    <div class="navbar1">
-    <div class="subnav1">
-        <button class="subnavbtn1">Engineering Copier Paper</button>
-        <div class="subnav-content1">
-            {categories.map(category => (
+        <Menu>
+        {categories.map((category, index) => (
+            <Menu.Item key={index}>
                 <a href={category.link}>{category.title}</a>
-            ))}
-        </div>
-    </div>
-    </div>  
+            </Menu.Item>
+        ))}
+
+    </Menu>
     )
 }

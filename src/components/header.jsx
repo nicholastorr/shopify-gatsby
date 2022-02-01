@@ -13,6 +13,7 @@ import {
   container,
   searchButton,
   nav,
+  nada,
 } from "./header.module.css"
 import useWindowSize from "../utils/windowDimensions"
 
@@ -76,6 +77,7 @@ export function Header() {
           </>
         )}
       </Toast>
+      <div classname={nada}></div>
     </div>
   )
 }
