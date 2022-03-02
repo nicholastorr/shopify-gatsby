@@ -15,7 +15,7 @@ import {
   nav,
   nada,
 } from "./header.module.css"
-import useWindowSize from "../utils/windowDimensions"
+
 
 
 
@@ -25,11 +25,10 @@ export function Header() {
   
 
   const { checkout, loading, didJustAddToCart } = React.useContext(StoreContext)
-  const { width } = useWindowSize();
 
 
   
-  console.log(`${width}`)
+
 
   const items = checkout ? checkout.lineItems : []
 
@@ -41,7 +40,7 @@ export function Header() {
     <div className={container}>
       <header className={header}>
       <Link to="/" className={navLogo}>
-          <img className={headerLogo} src="https://cdn.shopify.com/s/files/1/0292/8205/files/logo.png?v=1628871064" alt="" style={{ width: width / 4.5}}/>
+          <img className={headerLogo} src="https://cdn.shopify.com/s/files/1/0292/8205/files/logo.png?v=1628871064" alt="" />
         </Link>
         <Navigation className={nav} />
         <Link to="/search" className={searchButton}>
