@@ -83,13 +83,3 @@ Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby f
 
 <br>
 
-
-# .env 
--------------------
-```
-# See how to get these values here: https://gatsby.dev/shopify-api-keys
-GATSBY_STOREFRONT_ACCESS_TOKEN=XXX
-GATSBY_SHOPIFY_STORE_URL=plotterpaperdirect.myshopify.com
-SHOPIFY_SHOP_PASSWORD=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
-GOOGLE_ANALYTICS_ID=XXX
-```
